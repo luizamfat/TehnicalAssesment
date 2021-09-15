@@ -1,0 +1,24 @@
+.input_style{
+    font-family: Poppins-Medium, serif;
+    font-size: 25px;
+    color: #131313;
+    display: block;
+    width: 700px;
+    background: #fdfdfd;
+    height: 50px;
+    border-radius: 15px;
+    outline: none;
+    box-shadow:0 0 15px 4px rgb(150, 197, 226);
+}
+
+.button_style{
+    position: relative;
+    top: -55px;
+    left: 800px;
+    height: 50px;
+    width: 150px;
+    border-radius: 5px;
+    background-color: #fdfdfd;
+    font-family: Poppins-Medium, serif;
+    font-size: 20px;
+}

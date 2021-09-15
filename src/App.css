@@ -1,15 +1,22 @@
 .App {
-  text-align: center;
-}
-
-.App-header {
-  background-color: #283432;
+  background-color: rgb(186, 246, 233);
+  text-align: left;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  display: grid;
+  grid-template-columns: [first] 250px [line2]  auto  [line3] 250px [end];
+  grid-template-rows: [row1-start] 150px [row1-end] 150px [row2-end] auto [last-line];
 }
 
+.search_bar{
+  grid-column: line2 / line3;
+  grid-row: row1-end/row2-end;
+}
+
+.title{
+  grid-column: line2 / line3;
+  grid-row: row1-start/row1-end;
+  align-self: center;
+  text-align: center;
+  font-size: xxx-large;
+  font-family: Poppins-Medium, serif;
+}

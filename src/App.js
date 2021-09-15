@@ -1,12 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
+import SearchBar from "./search_bar"
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-
-      </header>
+        <div className="title">
+            Sector Labs Assessment
+        </div>
+        <div className="search_bar">
+            <SearchBar/>
+        </div>
     </div>
   );
 }

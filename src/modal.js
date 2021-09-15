@@ -8,9 +8,6 @@ export const ModalComponent = ({open, toogle, content}) => {
         toogle(false);
     };
 
-    // const modalStyle = {
-    //     backgroundColor: 'red'
-    // };
 
     const getContent = () => {
         let arrayVal = Object.entries(content).map(item => item[1]);

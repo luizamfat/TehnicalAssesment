@@ -1,7 +1,7 @@
 import './App.css';
 import {SearchBar} from "./search_bar"
 import {CardList} from "./cards.js"
-import {useState, useEffect} from "react";
+import {useState} from "react";
 
 
 function App() {

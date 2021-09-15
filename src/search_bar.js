@@ -1,6 +1,6 @@
 import React from "react";
 import "./search_bar.css";
-import {useState, useEffect} from "react";
+import {useState} from "react";
 
 export const SearchBar = ({addItem}) => {
     const [username, setUsername] = useState();

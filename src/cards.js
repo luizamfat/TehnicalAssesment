@@ -1,5 +1,5 @@
 import React from "react";
-import {Badge, Button} from 'reactstrap'
+import {Badge} from 'reactstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./cards.css"
 import {ModalComponent} from "./modal";
@@ -20,10 +20,6 @@ const CardListItem = props => {
             .then(data => {
                 console.log(data);
             })
-
-    }
-
-    const handleClick = () =>{
 
     }
 
@@ -50,9 +46,6 @@ const CardListItem = props => {
                     Created: {props.gists.created_at}
                 </p>
 
-                {/*<p>*/}
-                {/*    {getLastForks(props.gists.forks_url)}*/}
-                {/*</p>*/}
             </div>
             <ModalComponent
                 open={openForm}
@@ -64,7 +57,7 @@ const CardListItem = props => {
 };
 
 export const CardList = props => {
-    console.log(props.gists);
+
     return (
 
         <ul style={{listStyleType: "none"}}>

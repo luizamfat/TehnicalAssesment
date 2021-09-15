@@ -20,3 +20,8 @@
   font-size: xxx-large;
   font-family: Poppins-Medium, serif;
 }
+
+.cards{
+  grid-column: line2 / line3;
+  grid-row: row2-end/last-line;
+}

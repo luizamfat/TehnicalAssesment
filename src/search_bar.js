@@ -1,56 +1,31 @@
 import React from "react";
-import  "./search_bar.css";
+import "./search_bar.css";
+import {useState, useEffect} from "react";
 
-class SearchBar extends React.Component {
+export const SearchBar = ({addItem}) => {
+    const [username, setUsername] = useState();
 
-    constructor(props) {
-        super(props);
+    const handleSearch = () => {
 
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSearch = this.handleSearch.bind(this);
-
-        this.state = {
-            formControls: {
-                username: {
-                    value: '',
-                    placeholder: 'Username...'
-                }
-            }
-        };
-    }
-
-    handleChange = event => {
-
-        const name = event.target.name;
-        const value = event.target.value;
-        const updatedControls = this.state.formControls;
-        const updatedFormElement = updatedControls[name];
-
-        updatedFormElement.value = value;
-        updatedControls[name] = updatedFormElement;
-
-        this.setState({
-            formControls: updatedControls,
-        });
-    };
-    handleSearch(){
-        let user = this.state.formControls.username.value;
-        fetch('https://api.github.com/users/'+ user + '/gists')
+        fetch('https://api.github.com/users/' + username.username + '/gists')
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                addItem(data);
             })
     }
 
-    render() {
-        return (
-            <div>
-                <form>
-                    <input className="input_style" type="text" placeholder="Username..." name="username"  onChange={this.handleChange}/>
-                </form>
-                <button className="button_style" onClick={this.handleSearch}>SEARCH</button>
-            </div>
-        );
-    }
+    return (
+        <div>
+            <form>
+                <input className="input_style" type="text" placeholder="Username..." name="username"
+                       onChange={(e) =>
+                           setUsername({username: e.target.value})
+                       }/>
+            </form>
+            <button className="button_style" onClick={handleSearch}> SEARCH</button>
+        </div>
+    );
+
 }
-export default SearchBar;
+
+

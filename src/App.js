@@ -1,19 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
-import SearchBar from "./search_bar"
+import {SearchBar} from "./search_bar"
+import {CardList} from "./cards.js"
+import {useState, useEffect} from "react";
+
 
 function App() {
+    const [items, setItems] = useState([]);
 
-  return (
-    <div className="App">
-        <div className="title">
-            Sector Labs Assessment
+    const addItem = (item) => {
+        setItems(item);
+    };
+
+    return (
+        <div className="App">
+            <div className="title">
+                Sector Labs Assessment
+            </div>
+            <div className="search_bar">
+                <SearchBar addItem={addItem}/>
+            </div>
+            <div className="cards">
+                <CardList gists={items}/>
+            </div>
         </div>
-        <div className="search_bar">
-            <SearchBar/>
-        </div>
-    </div>
-  );
+    );
 }
 
 export default App;

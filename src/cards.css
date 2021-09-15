@@ -1,0 +1,11 @@
+.card-container{
+    font-family: Poppins-Medium, serif;
+    font-size: larger;
+}
+
+.badge{
+    background-color: #c76be0;
+    position: relative;
+    left: 200px;
+    top:20px;
+}

@@ -1,14 +1,13 @@
 .input_style{
     font-family: Poppins-Medium, serif;
     font-size: 25px;
-    color: #131313;
+    color: rgba(13, 66, 80, 0.85);
     display: block;
     width: 700px;
-    background: #fdfdfd;
+    background: #e8a87c;
     height: 50px;
     border-radius: 15px;
     outline: none;
-    box-shadow:0 0 15px 4px rgb(150, 197, 226);
 }
 
 .button_style{
@@ -18,7 +17,12 @@
     height: 50px;
     width: 150px;
     border-radius: 5px;
-    background-color: #fdfdfd;
+    background-color: #e8a87c;
     font-family: Poppins-Medium, serif;
     font-size: 20px;
+    color: rgba(8, 52, 62, 0.85);
+}
+#inputID::placeholder {
+    color: rgba(8, 52, 62, 0.85);
+    opacity: 1;
 }

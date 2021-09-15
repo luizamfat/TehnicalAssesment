@@ -8,10 +8,9 @@ export const ModalComponent = ({open, toogle, content}) => {
         toogle(false);
     };
 
-    const modalStyle = {
-        width: '700px',
-        backgroundColor: 'red'
-    };
+    // const modalStyle = {
+    //     backgroundColor: 'red'
+    // };
 
     const getContent = () => {
         let arrayVal = Object.entries(content).map(item => item[1]);
@@ -20,9 +19,9 @@ export const ModalComponent = ({open, toogle, content}) => {
     console.log(content);
     return (
         <Modal isOpen={open} toogle={toogle} className={"modal-xl"}>
-            <ModalHeader className={"text_style"}> <strong>Content of the file</strong>  </ModalHeader>
-            <ModalBody>
-                <div className={"text_style"}>
+            <ModalHeader className={"modal_style"}> <strong>Content of the file</strong>  </ModalHeader>
+            <ModalBody className={"modal_style"}>
+                <div >
                     <p><strong>Name:</strong> {getContent().filename}</p>
                     <p><strong>Type:</strong> {getContent().type}</p>
                     <p><strong>Language:</strong> {getContent().language}</p>

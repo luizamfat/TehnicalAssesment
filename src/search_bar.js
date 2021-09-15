@@ -17,7 +17,7 @@ export const SearchBar = ({addItem}) => {
     return (
         <div>
             <form>
-                <input className="input_style" type="text" placeholder="Username..." name="username"
+                <input id="inputID" className="input_style" type="text" placeholder="Username..." name="username"
                        onChange={(e) =>
                            setUsername({username: e.target.value})
                        }/>

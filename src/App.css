@@ -1,5 +1,5 @@
 .App {
-  background-color: rgb(186, 246, 233);
+  background-color: #85DCB0;
   text-align: left;
   min-height: 100vh;
   display: grid;
@@ -19,6 +19,7 @@
   text-align: center;
   font-size: xxx-large;
   font-family: Poppins-Medium, serif;
+  color: rgba(8, 52, 62, 0.85);
 }
 
 .cards{

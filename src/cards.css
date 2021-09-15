@@ -1,11 +1,19 @@
 .card-container{
     font-family: Poppins-Medium, serif;
     font-size: larger;
+    background-color: #41b3a3;
+    outline: none;
+    border: none !important;
+}
+
+.card-container:hover{
+    transform: scale(1.1);
 }
 
 .badge{
-    background-color: #c76be0;
+    background-color: #e27d60;
     position: relative;
     left: 200px;
     top:20px;
+    color: #2a2a2a;
 }

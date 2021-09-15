@@ -28,8 +28,7 @@ const CardListItem = props => {
     }
 
     return (
-        <li>
-
+        <li className={"card-li"}>
             <div
                 className="card-container"
                 style={{
